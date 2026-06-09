@@ -1,0 +1,354 @@
+/* --- 1. Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Gives a smooth glide animation when clicking links */
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #2b2d42;
+    line-height: 1.6;
+}
+
+/* --- 2. Navigation Bar (Flexbox) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Add this to your style.css file */
+
+.logo-image {
+    width: 45px;          /* Sets the width of your logo */
+    height: 45px;         /* Sets the height of your logo */
+    border-radius: 50%;   /* This magic line makes the square image a perfect circle */
+    object-fit: cover;    /* Prevents the image from stretching or looking squished */
+    border: 2px solid white; /* Optional: Adds a clean colored border around your photo */
+    transition: transform 0.2s ease;
+}
+
+/* Optional fun effect: makes your photo pop slightly when someone hovers over it */
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+/* --- 3. Hero Section (Updated for Multiple Buttons) --- */
+.hero-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%; /* Added top/bottom padding for clean spacing */
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 1.6rem; /* Adjusted slightly to fit the longer text title cleanly */
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content p.bio {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.highlight {
+    color: #4f46e5;
+}
+
+/* Flexbox container to align both buttons side-by-side */
+.hero-buttons {
+    display: flex;
+    gap: 15px;       /* Creates a clean space between buttons */
+    flex-wrap: wrap; /* Keeps it responsive on mobile screens */
+}
+
+/* Base button styles applied to BOTH buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Style specific to the primary "View My Work" solid button */
+.btn:not(.btn-secondary) {
+    background-color: #4f46e5;
+    color: white;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.15);
+}
+
+.btn:not(.btn-secondary):hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+/* Style specific to the "Download CV" outline button */
+.btn-secondary {
+    background-color: transparent;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+}
+
+.btn-secondary:hover {
+    background-color: #4f46e5;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- 4. Skills & Projects Layouts (CSS Grid) --- */
+.skills-section, .projects-section, .contact-section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.skills-section h2, .projects-section h2, .contact-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* Projects Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: #1a202c;
+}
+
+.project-card p {
+    color: #718096;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+/* --- 6. Accomplishments & Details Section --- */
+.details-section {
+    padding: 80px 8%;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap; /* Ensures responsiveness on mobile devices */
+}
+
+.details-block {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.details-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #1a202c;
+    position: relative;
+}
+
+/* Custom Bullet List for Certifications */
+.custom-list {
+    list-style: none;
+}
+
+.custom-list li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #4a5568;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Adds a sleek modern indigo dot instead of basic bullet points */
+.custom-list li::before {
+    content: "•";
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+/* Soft Skills Tags Layout */
+.soft-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.soft-skill-tag {
+    background-color: #ffffff;
+    color: #4f46e5;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+
+.soft-skill-tag:hover {
+    background-color: #4f46e5;
+    color: white;
+    border-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* ---  Contact Section (Updated with Brand Colors) --- */
+.contact-section {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #1a202c;
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-section p {
+    color: #a0aec0;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Prevents buttons from squeezing together on mobile screens */
+}
+
+/* Base button styling */
+.contact-btn {
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Individual Platform Brand Colors */
+.email-btn {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.github-btn {
+    background-color: #73fb7c;
+    border-color: #73fb7c;
+}
+
+.linkedin-btn {
+    background-color: #0077b5; /* LinkedIn Blue */
+    border-color: #0077b5;
+}
+
+.leetcode-btn {
+    background-color: #ffa116; /* LeetCode Orange */
+    border-color: #ffa116;
+}
+
+
+/* Interactive Hover Effects */
+.contact-btn:hover {
+    transform: translateY(-3px); /* Makes the button lift up slightly */
+    opacity: 0.9;                /* Gives a slight fade highlight */
+    color: white;                /* Forces text to remain highly visible */
+}
