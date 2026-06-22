@@ -1,16 +1,21 @@
-# 🌐 Hasini Portfolio
+## 🌐 Hasini Portfolio
+
+- Portfolio Website:
+- https://hasiniambatiportfolio.netlify.app
 
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/375ba817-f453-488c-a1fb-9e301f68c1ec" />
 
-<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/f9ea7084-f20e-4c97-b269-73d440419df7" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/f91a351a-854b-4f2d-8d9f-3804bafacd2c" />
 
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/70fa0d41-ea8d-4eb7-8c2b-b43ae5688932" />
 
 A clean, responsive, and modern personal portfolio website built using HTML and CSS to showcase my skills, projects, certifications, and professional journey as an aspiring Software Development Engineer and AI/ML Engineer.
 
+
 ## 🚀 Live Demo
 
 🌍 [Open Application](https://hasiniambatiportfolio.netlify.app/)
+
 
 ## 📋 Overview
 
@@ -201,6 +206,12 @@ Expected Graduation: 2028
 - Email: hasiniambati200@gmail.com
 
 ## Author
-Hasini Reddy
 
-B.Tech AI Student
+**Ambati Hasini**
+
+B.Tech Artificial Intelligence Student
+Aspiring Software Developer
+
+Portfolio: https://hasiniambatiportfolio.netlify.app
+GitHub: https://github.com/hasiniambati23
+LinkedIn: https://linkedin.com/in/hasini-reddy-ambati-82ab87321
